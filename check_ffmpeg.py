@@ -41,38 +41,6 @@ def check_ffmpeg():
 
 4. Перезапустите командную строку и снова запустите этот скрипт для проверки
             """)
-        elif sys.platform == 'darwin':  # macOS
-            print("""
-Для установки FFmpeg на macOS выполните:
-
-1. Установите Homebrew (если еще не установлен):
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-2. Установите FFmpeg:
-   brew install ffmpeg
-
-3. Перезапустите терминал и снова запустите этот скрипт для проверки
-            """)
-        else:  # Linux
-            print("""
-Для установки FFmpeg на Linux выполните:
-
-1. Ubuntu/Debian:
-   sudo apt update
-   sudo apt install ffmpeg
-
-2. CentOS/RHEL:
-   sudo yum install epel-release
-   sudo yum install ffmpeg ffmpeg-devel
-
-3. Fedora:
-   sudo dnf install ffmpeg ffmpeg-devel
-
-4. Arch Linux:
-   sudo pacman -S ffmpeg
-
-5. Перезапустите терминал и снова запустите этот скрипт для проверки
-            """)
         
         return False
     else:
