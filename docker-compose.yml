@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  rtmp-to-rtsp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8554:8554"
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Moscow
+    command:
+      - --rtmp-url=rtmp://example.com/live/stream
+      - --rtsp-port=8554
+      - --rtsp-path=stream 
